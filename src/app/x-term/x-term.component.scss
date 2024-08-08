@@ -2,11 +2,25 @@
     height: 100%;
     width: 100%;
 
-    // .xterm-helpers{
-    //     display: none;
-    // }
+    .xterm .xterm-viewport{
+        overflow-y: auto;
+    }
+
     .terminal-container {
         width: 100%;
         height: 100%;
+        overflow: hidden;
+    }
+
+    ::-webkit-scrollbar-track{
+        -webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.0);
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background: #4f565e;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover{
+        background: #b7b7b7;
     }
 }

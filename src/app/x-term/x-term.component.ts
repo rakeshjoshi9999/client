@@ -16,12 +16,12 @@ export class XTermComponent  implements OnInit{
 
   ngOnInit(): void {
     this.terminal = new Terminal({
-      rows:13
+      rows:14, 
+      fontSize:12
     });
     this.terminal.open(this.terminalContainer.nativeElement);
-    this.terminal.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ');
+    this.terminal.write('Welcome to \x1B[1;3;31mCode Stack\x1B[0m $ ');
     this.terminal.onData((data)=>{
-      console.log('>>>',data)
       this.socket.emit('terminal:write',data);
     })
 

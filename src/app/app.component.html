@@ -2,17 +2,24 @@
   <div class="header-section">
     <div class="header-grid">
       <div class="name">
+        <em class="pi pi-code icon"></em>
         Code Stack
       </div>
     </div>
   </div>
   <div class="code-section">
-        <div class="file-explorer-section">
-         
-        </div>
-        <div class="editor-section">
-
-        </div>
+    <p-splitter [style]="{ height: '100%' }" styleClass="mb-5" [panelSizes]="[15, 85]" [minSizes]="[10,0]">
+      <ng-template pTemplate>
+          <div class=" flex align-items-center justify-content-center">
+            <app-file-tree></app-file-tree> 
+          </div>
+      </ng-template>
+      <ng-template pTemplate>
+          <div class="flex align-items-center justify-content-center">
+              code..
+          </div>
+      </ng-template>
+  </p-splitter>
   </div>
   <div class="terminal-section">
     <div class="terminal-wrapper">
